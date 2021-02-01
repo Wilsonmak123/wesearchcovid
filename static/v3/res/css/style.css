@@ -1,0 +1,307 @@
+html,
+body {
+	height: 100%;
+	min-width: 650px;
+	background-image: url("../img/background.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.container-fluid {
+	height: 100%;
+	overflow: hidden;
+}
+
+.top-nav {
+	background-color: rgb(81, 124, 141);
+	transition: all .4s ease-in;
+}
+
+.top-nav.dashboard {
+	background-color: rgb(43, 44, 44);
+	transition: all .4s ease-in;
+}
+
+.nav-title {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 36px;
+}
+
+.navbar-toggler div {
+	width: 25px;
+	height: 3px;
+	background-color: white;
+	margin: 4px 0;
+	opacity: 0.75;
+}
+
+.search-label {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 60px;
+}
+
+.float-container {
+	background-color: #1e2325;
+	min-width: 200px;
+	padding: 5px;
+	border: 1px solid rgb(94, 94, 94);
+	border-radius: 2px;
+}
+
+.float-container button {
+	padding: 0px;
+	width: 30px;
+	border-width: 0px;
+	border-color: #1e2325;
+	background-color: #1e2325;
+}
+
+#search {
+	overflow-y: scroll;
+	max-height: 93vh;
+	overflow-x: hidden;
+	box-sizing: content-box;
+	padding-left: 32px;
+}
+
+#dashboardMap {
+	width: 80vw;
+	height: 90vh;
+	padding-top: 1.5%;
+}
+
+#dashboard {
+	height: 100vh;
+	background-color: #191c1d;
+}
+
+#floatPanel {
+	width: 100%;
+	height: 91%;
+	background-color: #1e2325;
+	color: lightgrey;
+	display: flex;
+	flex-direction: column;
+}
+
+.float-panel-label-l {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	display: block;
+	text-align: center;
+	font-size: 1.5vw;
+	font-weight: bolder;
+}
+
+.float-panel-label {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	display: block;
+	text-align: center;
+	font-size: 1.2vw;
+}
+
+.stats-label:first-of-type {
+	border-top: 1px solid grey;
+}
+
+.stats-label {
+	display: block;
+	font-size: 1.25vw;
+	padding-left: 5px;
+	background: linear-gradient(to left, #1e2325 1%, white 50%, #1e2325 100%) left bottom transparent no-repeat;
+	background-size: 100% 1px;
+}
+
+.stats-value {
+	display: block;
+	padding-bottom: 5px;
+	font-size: 2.3vw;
+	font-weight: bolder;
+	padding-left: 5px;
+	color: red;
+}
+
+#prevMapType {
+	position: absolute;
+	left: 3px;
+}
+
+#nextMapType {
+	position: absolute;
+	right: 3px;
+}
+
+#countryListContainer {
+	margin-top: -1px;
+	flex: 1 1 auto;
+	height: 0;
+}
+
+#countryList {
+	overflow-y: scroll;
+	text-align: left;
+	max-height: 100%;
+}
+
+#countryList.list-group .list-group-item {
+	background: linear-gradient(to left, #1e2325 1%, white 50%, #1e2325 100%) left bottom transparent no-repeat;
+	background-size: 100% 1px;
+	padding-left: 3px;
+	cursor: pointer;
+}
+
+#countryList.list-group .list-group-item.active {
+	background-color: #007bff;
+	padding-left: 3px;
+}
+
+#countryList.list-group .list-group-item span {
+	font-weight: bold;
+}
+
+#countryList.list-group .list-group-item span.infected {
+	color: red;
+}
+
+#countryList.list-group .list-group-item span.active {
+	color: #ffaa00;
+}
+
+#countryList.list-group .list-group-item span.recovered {
+	color: #70a800;
+}
+
+#countryList.list-group .list-group-item span.deaths {
+	color: lightgray;
+}
+
+.mapType {
+	margin-left: 25%;
+	margin-right: 25%;
+	cursor: pointer;
+}
+
+.stats-value[data-bind="TotalConfirmed"],
+span[map-type="infected"] {
+	color: red;
+}
+
+.stats-value[data-bind="Active"],
+span[map-type="active"] {
+	color: #ffaa00;
+}
+
+.stats-value[data-bind="TotalRecovered"],
+span[map-type="recovered"] {
+	color: #70a800;
+}
+
+.stats-value[data-bind="TotalDeaths"],
+span[map-type="deaths"] {
+	color: lightgray;
+}
+
+#spinner {
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	z-index: 9999;
+}
+
+#spinner .spinner-border {
+	margin-top: 15%;
+	border-right-color: white;
+}
+
+#loadingOverlay{
+	pointer-events: none;
+	z-index: 9999;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0, 0.6);
+	opacity: 0;
+	transition: all 1s;
+}
+
+#loadingOverlay.active{
+	pointer-events: all;
+	opacity: 1;
+	transition: all 1s;
+}
+
+#loadingIcon{
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+#loadingIcon .spinner-grow{
+	max-height: 20px;
+	max-width: 20px;
+	animation: spinner-grow 1.5s ease-in-out infinite;
+}
+
+#loadingIcon #spinner1.spinner-grow{
+	animation-delay: 0.25s;
+}
+
+#loadingIcon #spinner2.spinner-grow{
+	animation-delay: 0.5s;
+}
+
+#loadingIcon #spinner3.spinner-grow{
+	animation-delay: 0.75s;
+}
+
+#searchResult .card{
+	margin-top: 20px;
+}
+
+.search-row {
+	overflow-y: scroll;
+	max-height: 89vh;
+}
+
+#search > .form-group{
+	margin-top: 10%;
+}
+
+#search.has-result > .form-group{
+	margin-top: 2%;
+	transition: all 1s ease-in-out;
+}
+
+#search #searchResult {
+	display: none;
+}
+
+#search.has-result #searchResult {
+	display: block;
+}
+
+#searchResult p.card-text {
+	padding: 5px;
+	border-radius: 5px;
+	background-color: lightyellow;
+	margin-top: 10px;
+	transition: all 1s ease-in-out;
+}
+
+#searchResult p.card-text mark{
+	background-color: yellow;
+}
+
+#searchResult a.expand {
+	float: right;
+}
+
+#searchResultList div.card-header span{
+	font-size: 20px;
+}
