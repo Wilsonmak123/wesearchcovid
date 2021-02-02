@@ -1,3 +1,6 @@
+<img src="https://img.shields.io/badge/python-3.6-green" alt="python 3.6" /> <img src="https://img.shields.io/badge/flask-1.1.2-blue" alt="flask" /> <img src="https://img.shields.io/badge/BERT-red" alt="BERT" />
+
+
 # wesearchcovid
 
 wesearchcovid is a closed-domain Question Answering System. It retrieved the papers from the White House and a coalition of leading research groups. The objective is to returnan answer from the text of paper.
