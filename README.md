@@ -4,10 +4,7 @@
 
 wesearchcovid is a closed-domain Question Answering System. It retrieved the papers from the White House and a coalition of leading </br> research groups. The objective is to returnan answer from the text of paper.
 
-# A brief pictures of the QA system
-![image](https://i.imgur.com/VCsuIFN.jpg)
 
-The retriever creates  TF-IDF features based on uni-gram and bi-gram. When a user enters a query, it calculates the cosine similarity between the query and each sentence of the articles and assigns the score.  Then, the reader (BERT) will read through all the documents and return the highest similarity score corresponding to the query.  
 
 # How to use 
 Cloning this respiratory, open your code editor and cd to flask_app folder.<br/>
@@ -18,4 +15,8 @@ Cloning this respiratory, open your code editor and cd to flask_app folder.<br/>
  
  # UI
  ![image](https://i.imgur.com/oJTA7VE.jpg)
+ 
+ # Result
+ 
+ ![image]()
  
