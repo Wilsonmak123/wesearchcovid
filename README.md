@@ -2,7 +2,7 @@
 
 # What is wesearchcovid
 
-wesearchcovid is a closed-domain Question Answering System. It retrieved the papers from the White House and a coalition of leading research groups. </br>The objective is to returnan answer from the text of paper.
+wesearchcovid is a closed-domain Question Answering System. It retrieved the papers from the White House and a coalition of leading research groups. The objective is to returnan answer from the text of paper.
 
 
 
@@ -18,12 +18,12 @@ Cloning this respiratory, open your code editor and cd to flask_app folder.<br/>
  
  # Result
  
- ![image](https://ibb.co/488TCC0)
+ ![image](https://i.imgur.com/HTqxw9L.png)
  
  # Bookmark
  
- ![image](https://ibb.co/0qXNSrq)
+ ![image](https://i.imgur.com/CUnFHTz.png)
  
  # DashBoard
  
-  ![image](https://ibb.co/VJmc4wy)
+  ![image](https://i.imgur.com/dzXdNSS.png)
