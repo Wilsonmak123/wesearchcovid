@@ -7,11 +7,11 @@ wesearchcovid is a closed-domain Question Answering System focusing on COVID-19 
 
 
 # How to use 
-Cloning this respiratory, open your code editor and run the flask_app file.<br/>
+Cloning this respiratory, open your code editor and run the flask_app file by the following command.<br/>
  
  `flask run ` <br/>
  
- After running this command, it will establish a localhost server and you can access to use it! <br/>
+ It will establish a localhost server and you can access to use it! <br/>
  
  # UI
  ![image](https://i.imgur.com/oJTA7VE.jpg)
