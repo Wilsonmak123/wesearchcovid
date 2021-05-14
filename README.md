@@ -16,11 +16,11 @@ Cloning this respiratory, open your code editor and run the flask_app file.<br/>
  # UI
  ![image](https://i.imgur.com/oJTA7VE.jpg)
  
- # Result
+ # Result Page
  
  ![image](https://i.imgur.com/HTqxw9L.png)
  
- # Bookmark
+ # Bookmark Page
  
  ![image](https://i.imgur.com/CUnFHTz.png)
  
